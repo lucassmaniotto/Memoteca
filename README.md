@@ -1,27 +1,76 @@
-# Memoteca
+# Memoteca 💭
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+Projeto desenvolvido em Angular 14 durante a formação [Formação Explore o Framework Angular](https://www.alura.com.br/formacao-angular-14) da Alura.
 
-## Development server
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **Memoteca 💭**
+| :label: Tecnologias | angular, typescript, html, css, json-server
+| 🖥 Curso    | https://www.alura.com.br/formacao-angular-14
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Detalhes do projeto
 
-## Code scaffolding
+Este projeto foi desenvolvido durante a formação [Formação Explore o Framework Angular](https://www.alura.com.br/formacao-angular-14) da Alura. O projeto consiste em uma aplicação para armazenar frases e pensamentos que são importantes para o usuário. A aplicação permite que o usuário adicione, edite, liste e remova frases e pensamentos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### ⚙️ Configurando o projeto
 
-## Build
+O projeto utiliza o Angular no frontend e o json-server no backend, para simular uma API REST.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para instalar as dependências do projeto, execute o comando abaixo:
+```bash
+npm install
+```
 
-## Running unit tests
+Para instalar o json-server, execute o comando abaixo:
+```bash
+cd .\backend\
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### ▶️ Executando o projeto
 
-## Running end-to-end tests
+Para executar o projeto, execute o comando abaixo:
+```bash
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+O frontend estará disponível em `http://localhost:4200/`.
 
-## Further help
+Para executar o json-server, execute o comando abaixo:
+```bash
+cd .\backend\
+npm start
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+O backend estará disponível em `http://localhost:3001/`. e para acessar a API, utilize a rota `http://localhost:3001/thoughts`.
+
+### 💡 Funcionalidades
+
+#### Cadastro de pensamentos
+Para cadastrar um pensamento, o usuário deve preencher o formulário com a sua frase, a autoria e o modelo que gostaria de exibir seu card, acessando a rota `http://localhost:4200/createThought`.
+
+O formulário possui validação de campos obrigatórios e de tamanho máximo de caracteres, além de padrão de escrita.
+
+#### Listagem de pensamentos
+O usuário pode visualizar todos os pensamentos cadastrados, podendo ser filtrados buscando por uma palavra-chave, além de listar os pensamentos favoritos, acessando a rota `http://localhost:4200/listThought`.
+
+Existe paginação para a listagem de pensamentos, exibindo 6 pensamentos por página. O usuário pode carregar mais pensamentos clicando no botão "Carregar mais" ao final da lista.
+
+##### Favoritar pensamentos
+O usuário pode favoritar um pensamento ou desfavoritar, clicando no botão de coração no card do pensamento.
+
+#### Edição de pensamentos
+O usuário pode editar um pensamento cadastrado, acessando a rota `http://localhost:4200/editThought/:id`, onde `:id` é o id do pensamento que deseja editar. O usuário acessa a rota clicando no botão "Editar" em um card listado em `http://localhost:4200/listThought`.
+
+Ao ser redirecionado, o usuário pode fazer as mesmas alterações que no cadastro, porém, os campos já estarão preenchidos com os dados atuais do pensamento.
+
+#### Remoção de pensamentos
+O usuário pode remover um pensamento cadastrado, acessando a rota `http://localhost:4200/listThought`. 
+
+Ao clicar no botão "Remover" em um card listado, o pensamento será removido da lista após a confirmação do usuário.
+
+## 📝 Licença
+
+Projeto desenvolvido por [Alura](https://www.alura.com.br) e utilizado nos cursos de Angular 14.
+
+Instrutora: [Nayanne Batista](https://cursos.alura.com.br/user/nayanne-batista) 
